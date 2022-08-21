@@ -1,0 +1,22 @@
+### -- signup new user
+POST http://localhost:5000/api/users
+content-type: application/json
+
+{
+  "name": "Rick",
+  "email": "rick@email.com",
+  "password": "mypassword"
+}
+
+### -- login existing user
+POST http://localhost:5000/api/users/login
+content-type: application/json
+
+{
+  "email": "rick@email.com",
+  "password": "mypassword"
+}
+
+### -- account data after successful signup/login
+GET http://localhost:5000/api/users/account
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmQwZTZkZmJjZjQwYmY1ODJkZjhkOSIsImlhdCI6MTY2MDc1NDUyNSwiZXhwIjoxNjYwODQwOTI1fQ.tg-jOCLMYn_owCn2YVZHEM_IRUtvEnOwHzA5JToos-E
